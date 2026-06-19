@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sam McCallum</title>
+  <meta name="description" content="PhD student in Mathematics, University of Bath.">
+  <meta name="author" content="Sam McCallum">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sam McCallum">
+  <meta property="og:description" content="PhD student in Mathematics, University of Bath.">
+  <meta property="og:url" content="https://sammccallum.github.io">
+
+  <meta name="theme-color" content="#2f6fed">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <header class="topbar">
+      <h1>Sam McCallum</h1>
+      <nav class="links" aria-label="Profile links">
+        <a href="https://scholar.google.com/citations?user=YGmgSVYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://github.com/sammccallum" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/sgmccallum" target="_blank" rel="noopener">X</a>
+      </nav>
+    </header>
+
+    <div class="intro">
+      <p>I'm a PhD student in Mathematics at the University of Bath, working with James Foster.</p>
+      <p>I am interested in the combination of differential equations and machine learning. This has included efficient backpropagation algorithms for neural differential equations and extending flow map methods to SDEs.</p>
+    </div>
+
+    <hr>
+
+    <article class="project project--fig">
+      <h2><a href="https://arxiv.org/abs/2606.01086" target="_blank" rel="noopener">Strong Stochastic Flow Maps</a></h2>
+      <p>
+        Flow and diffusion models generate high-quality samples in many modalities; however, many network
+        evaluations are required during inference due to numerical integration of an underlying differential equation.
+        This work introduces Strong Stochastic Flow Maps as a framework for learning the strong solution map of SDEs,
+        directly generalizing deterministic flow maps to the stochastic setting.
+      </p>
+      <img class="project-figure" src="assets/ssfm.png" alt="Ground-truth SDE solution and the learned flow map approximation over time." loading="lazy">
+    </article>
+
+    <article class="project project--fig">
+      <h2><a href="https://arxiv.org/abs/2410.11648" target="_blank" rel="noopener">Efficient, Accurate and Stable Gradients for Neural ODEs</a></h2>
+      <p>
+        Training Neural ODEs requires backpropagating through an ODE solve.
+        The state-of-the-art backpropagation method is recursive checkpointing
+        that balances recomputation with memory cost. This work introduces a class of
+        algebraically reversible ODE solvers that significantly improve upon
+        both the time and memory cost of recursive checkpointing.
+      </p>
+      <img class="project-figure" src="assets/reversible.png" alt="Runtime vs. time steps: the reversible solver is far faster than checkpointing." loading="lazy">
+    </article>
+  </main>
+</body>
+</html>
